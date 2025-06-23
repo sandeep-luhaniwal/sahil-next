@@ -35,6 +35,11 @@ body {
   background-size: cover;
   background-position: top;
 }
+.bg_features_eng {
+  background-image: url('/assets/images/webp/features-ai.webp');
+  background-size: cover;
+  background-position: top;
+}
 
 .bg_gradient {
   background-color: rgba(255, 255, 255, 0.12);
@@ -48,4 +53,14 @@ body {
 
 .font-medium {
   font-family: 'expo-arabic-med' !important;
+}
+
+
+/* globals.css or wherever you add custom styles */
+.direction-rtl {
+  direction: rtl;
+}
+
+.direction-rtl > * {
+  direction: ltr; /* so inner content stays normal */
 }
