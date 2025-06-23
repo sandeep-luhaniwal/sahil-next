@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-dark-pink: #4D2C66;
+  --color-orange: #FA9F54;
+  --color-dark-blue: #10294F;
+  --leading-120: 120%;
+  --leading-125: 125%;
+  --leading-175: 175%;
+  --leading-156: 156%;
+  --leading-130: 130%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: 'expo-arabic';
+  src: url('../../public/assets/fonts/expo-arabic/Expo-Arabic-Light.ttf');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'expo-arabic-bold';
+  src: url('../../public/assets/fonts/expo-arabic/Expo-Arabic-bold.ttf');
+}
+
+@font-face {
+  font-family: 'expo-arabic-med';
+  src: url('../../public/assets/fonts/expo-arabic/Expo-Arabic-med.ttf');
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'expo-arabic' !important;
+}
+
+.bg_hero {
+  background-image: url('/assets/images/webp/hero-bg.webp');
+  background-size: cover;
+  background-position: top;
+}
+
+.bg_gradient {
+  background-color: rgba(255, 255, 255, 0.12);
+  /* fallback for older browsers */
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.font-bold {
+  font-family: 'expo-arabic-bold' !important;
+}
+
+.font-medium {
+  font-family: 'expo-arabic-med' !important;
 }
