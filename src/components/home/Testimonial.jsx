@@ -92,8 +92,7 @@ const Testimonial = ({ engShow }) => {
                   <button
                     key={index}
                     onClick={() => setCurrent(index)}
-                    className={`w-10 h-1 rounded-full cursor-pointer transition-all duration-300 ${current === index ? 'bg-dark-pink' : 'bg-black/15'
-                      }`}
+                    className={`w-10 h-1 rounded-full cursor-pointer transition-all duration-300 ${current === index ? 'bg-dark-pink' : 'bg-black/15'}`}
                   />
                 ))}
               </div>

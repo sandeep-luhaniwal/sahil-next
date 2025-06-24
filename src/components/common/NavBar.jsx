@@ -39,9 +39,9 @@ const NavBar = ({ engShow, setEngShow }) => {
             <div className='relative group'>
               <p className={`text-white cursor-pointer text-base font-normal transition-all durration-300 group-hover:text-orange relative
                      before:w-0 ff_light flex items-center gap-1 before:h-[2px] before:bg-orange before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:durration-300`}
-              > {engShow ? "AR" : "Eng"} <span><Icons className icon={"arrow"} /></span></p>
+              > {engShow ? "AR" : "En"} <span><Icons className icon={"arrow"} /></span></p>
               <div className='bg-dark-blue absolute hidden group-hover:block top-full shadow-2xl text-white py-2 px-4 border border-white/60 rounded-xl'>
-                <p className='cursor-pointer hover:text-orange duration-300' onClick={() => setEngShow(false)}>Eng</p>
+                <p className='cursor-pointer hover:text-orange duration-300' onClick={() => setEngShow(false)}>En</p>
                 <p className='cursor-pointer mt-1 hover:text-orange duration-300' onClick={() => setEngShow(true)}>AR</p>
               </div>
             </div>
