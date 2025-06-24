@@ -8,7 +8,7 @@ const Footer = ({ engShow }) => {
   return (
     <div className="bg-[#101010]">
       <div className='max-w-[1240px] px-4 xl:px-0 mx-auto '>
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6 xl:gap-20 py-10 md:py-12 lg:py-[50px] ${engShow ? "text-right direction-rtl" : "text-left"}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6 xl:gap-16 py-10 md:py-12 lg:py-[50px] ${engShow ? "text-right direction-rtl" : "text-left"}`}>
           <div className={`flex flex-col ${engShow ? "items-end" : ""}`}>
             <Link href={'/'}>
               <Image src={"/assets/images/webp/page-logo.webp"}
@@ -67,7 +67,7 @@ const Footer = ({ engShow }) => {
             </div>
           </div>
           <div className='flex flex-col gap-3 lg:gap-4 max-w-[157px]'>
-            <p className='text-white font-medium text-xl md:text-2xl'>   {engShow ? " الميزات " : "Important Links"}</p>
+            <p className='text-white font-medium text-xl md:text-2xl'>   {engShow ? " الميزات " : "Get the App"}</p>
             <Link href={"/"} className='text-white leading-156 font-normal mt-6 text-base hover:text-orange duration-300'>
               <Image width={157} height={157} className='max-w-[157px]' alt='scanner'
                 src={"/assets/images/webp/scanner.webp"} />

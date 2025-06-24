@@ -36,9 +36,15 @@ const NavBar = ({ engShow, setEngShow }) => {
             })}
           </div>
           <div className={`flex ${engShow ? "flex-row-reverse" : "flex-row"} items-center gap-3 sm:gap-4`}>
-            <p onClick={() => setEngShow(!engShow)} className={`text-white cursor-pointer text-base font-normal transition-all durration-300 hover:text-orange relative
-                     before:w-0 ff_light before:h-[2px] before:bg-orange before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:durration-300`}
-            > {engShow ? "Eng" : "ARAB"}</p>
+            <div className='relative group'>
+              <p className={`text-white cursor-pointer text-base font-normal transition-all durration-300 group-hover:text-orange relative
+                     before:w-0 ff_light flex items-center gap-1 before:h-[2px] before:bg-orange before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:durration-300`}
+              > {engShow ? "AR" : "Eng"} <span><Icons className icon={"arrow"} /></span></p>
+              <div className='bg-dark-blue absolute hidden group-hover:block top-full shadow-2xl text-white py-2 px-4 border border-white/60 rounded-xl'>
+                <p className='cursor-pointer hover:text-orange duration-300' onClick={() => setEngShow(false)}>Eng</p>
+                <p className='cursor-pointer mt-1 hover:text-orange duration-300' onClick={() => setEngShow(true)}>AR</p>
+              </div>
+            </div>
             <button className='rounded-[50px] group cursor-pointer p-[1px] bg_gradient'>
               <span className='bg-dark-pink block group-hover:bg-orange duration-300 text-white font-medium text-base px-2.5 py-1.5 sm:px-5 sm:py-3 md:xp-7 lg:px-[30px] md:py-[15px] rounded-[100px]'>Download App</span>
             </button>
