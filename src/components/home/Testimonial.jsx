@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Icons from '../common/Icons';
 
 const sliderArray = [
@@ -30,6 +30,13 @@ const sliderArray = [
 
 const Testimonial = ({ engShow }) => {
   const [current, setCurrent] = useState(0);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
 
   const handlePrev = () => {
     setCurrent((prev) => (prev === 0 ? sliderArray.length - 1 : prev - 1));
