@@ -1,0 +1,101 @@
+'use client';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import Icons from '../common/Icons';
+
+const sliderArray = [
+  {
+    image: "/assets/images/webp/testimonial-first.webp",
+    arabname: "أيان مالك، مسافر من لندن",
+    arbades: "كان التخطيط لرحلتي إلى الرياض وجدة مُرهقًا إلى أن وجدتُ هذا التطبيق. تطابقت اقتراحات الذكاء الاصطناعي تمامًا مع اهتماماتي - مناظر غروب الشمس، والمواقع الثقافية، والمأكولات المحلية الرائعة مثل عربة كبسة. كان كل شيء مُوثّقًا وقريبًا، حتى أن خدمة الدردشة المحلية ساعدتني في حجز رحلة سفاري صحراوية في اللحظة الأخيرة. لقد جعل رحلتي سلسة، وشخصية، ولا تُنسى.",
+    des: "Planning my Dammam, Makkah, Madinah, Abha trip felt overwhelming until I found this app. The AI suggestions matched my interests perfectly—sunset views, cultural spots, and amazing local food like the Kabsa food truck. Everything was verified and nearby, and the local chat support even helped me book a last-minute desert safari. It made my trip smooth, personal, and unforgettable.",
+    name: "Ayaan Malik, Traveller from London"
+  },
+  {
+    image: "/assets/images/webp/testimonial-first.webp",
+    arabname: "أيان مالك، مسافر من لندن",
+    arbades: "كان التخطيط لرحلتي إلى الرياض وجدة مُرهقًا إلى أن وجدتُ هذا التطبيق. تطابقت اقتراحات الذكاء الاصطناعي تمامًا مع اهتماماتي - مناظر غروب الشمس، والمواقع الثقافية، والمأكولات المحلية الرائعة مثل عربة كبسة. كان كل شيء مُوثّقًا وقريبًا، حتى أن خدمة الدردشة المحلية ساعدتني في حجز رحلة سفاري صحراوية في اللحظة الأخيرة. لقد جعل رحلتي سلسة، وشخصية، ولا تُنسى.",
+    des: "Planning my Dammam, Makkah, Madinah, Abha trip felt overwhelming until I found this app. The AI suggestions matched my interests perfectly—sunset views, cultural spots, and amazing local food like the Kabsa food truck. Everything was verified and nearby, and the local chat support even helped me book a last-minute desert safari. It made my trip smooth, personal, and unforgettable.",
+    name: "Fatima Al Zahrani, Blogger from Jeddah"
+  },
+  {
+    image: "/assets/images/webp/testimonial-first.webp",
+    arabname: "أيان مالك، مسافر من لندن",
+    arbades: "كان التخطيط لرحلتي إلى الرياض وجدة مُرهقًا إلى أن وجدتُ هذا التطبيق. تطابقت اقتراحات الذكاء الاصطناعي تمامًا مع اهتماماتي - مناظر غروب الشمس، والمواقع الثقافية، والمأكولات المحلية الرائعة مثل عربة كبسة. كان كل شيء مُوثّقًا وقريبًا، حتى أن خدمة الدردشة المحلية ساعدتني في حجز رحلة سفاري صحراوية في اللحظة الأخيرة. لقد جعل رحلتي سلسة، وشخصية، ولا تُنسى.",
+    des: "Planning my Dammam, Makkah, Madinah, Abha trip felt overwhelming until I found this app. The AI suggestions matched my interests perfectly—sunset views, cultural spots, and amazing local food like the Kabsa food truck. Everything was verified and nearby, and the local chat support even helped me book a last-minute desert safari. It made my trip smooth, personal, and unforgettable.",
+    name: "Mohammed Khan, Photographer from Dubai"
+  },
+
+];
+
+const Testimonial = ({ engShow }) => {
+  const [current, setCurrent] = useState(0);
+
+  const handlePrev = () => {
+    setCurrent((prev) => (prev === 0 ? sliderArray.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrent((prev) => (prev === sliderArray.length - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <div className='max-w-[980px] mx-auto px-4 py-14 md:px-16 lg:py-20'>
+      <div className='text-center'>
+        <p className='text-lg md:text-xl leading-175 text-black uppercase'>
+          {engShow ? "  الأسئلة المتداولة " : "TESTIMONIALS"}
+        </p>
+        <h2 className='text-3xl leading-125 lg:text-4xl xl:text-[45px] font-medium text-black pt-5'>
+          {engShow
+            ? " احصل على التطبيق "
+            : "What They Say About Us"}
+        </h2>
+      </div>
+
+      <div className='flex flex-col lg:flex-row gap-10 mt-10 items-center'>
+        <Image
+          alt='testimonial'
+          width={361}
+          height={406}
+          src={sliderArray[current].image}
+          className='rounded-xl object-cover'
+        />
+        <div className='max-w-xl'>
+          <Image
+            alt='quote'
+            width={57}
+            height={57}
+            src={"/assets/images/svg/quotes.svg"}
+          />
+          <p className='text-black/65 text-base font-normal leading-156 py-6'>
+            {engShow
+              ? sliderArray[current].arbades
+              : sliderArray[current].des}
+          </p>
+          <p className='text-lg md:text-xl font-medium leading-175'>
+            {engShow
+              ? sliderArray[current].arabname
+              : sliderArray[current].name}
+          </p>
+
+          <div className='flex gap-2.5 pt-6'>
+            <button
+              onClick={handlePrev}
+              className="bg-black hover:bg-dark-pink duration-300 w-12 h-10 md:w-[54px] md:h-[44px] rounded-[5px] flex justify-center items-center cursor-pointer"
+            >
+              <Icons icon={"prevArrow"} />
+            </button>
+            <button
+              onClick={handleNext}
+              className="bg-black hover:bg-dark-pink duration-300 w-12 h-10 md:w-[54px] md:h-[44px] rounded-[5px] flex justify-center items-center cursor-pointer"
+            >
+              <Icons icon={"nextArrow"} />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Testimonial;
