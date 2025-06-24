@@ -48,7 +48,7 @@ const Faq = ({ engShow }) => {
     return (
         <div className="bg-white py-14 md:py-16 lg:py-20">
             <div className="max-w-[1240px] mx-auto px-4 xl-px-0">
-                <div className="grid grid-cols-1 lg:grid-cols-[37%_59%] gap-10 md:gap-6 xl:gap-[10px] justify-between items-center">
+                <div className={`${engShow ? 'direction-rtl' : ''} grid grid-cols-1 lg:grid-cols-[37%_59%] gap-10 md:gap-6 xl:gap-[10px] justify-between items-center`}>
                     <div className={` ${engShow ? "text-right" : "text-left"}`}>
                         <h2 className='text-3xl leading-125 lg:text-4xl xl:text-[45px] font-medium text-black pt-5'>
                             {engShow ? " الأسئلة الشائعة " : "Frequently Asked Question"}
@@ -75,7 +75,7 @@ const Faq = ({ engShow }) => {
                             >
                                 <div
                                     onClick={() => toggleFAQ(index)}
-                                    className="w-full cursor-pointer text-base md:text-lg lg:text-xl font-medium p-[15px] leading-175 focus:outline-none flex justify-between items-start"
+                                    className={`w-full cursor-pointer text-base md:text-lg lg:text-xl font-medium p-[15px] leading-175 focus:outline-none flex items-start justify-between ${engShow ? 'flex-row-reverse' : ''}`}
                                 >
                                     <span>
                                         {engShow ? item.arabQuestion : item.question}
@@ -88,7 +88,7 @@ const Faq = ({ engShow }) => {
                                     className={`text-base px-3 text-dark-pink/65 leading-[168%] transition-max-height duration-300 ease-in-out overflow-hidden ${activeIndex === index ? 'max-h-[300px] pb-3' : 'max-h-0 py-0'
                                         }`}
                                 >
-                                    <p className="text-base -mt-1">
+                                    <p className={`text-base -mt-1 ${engShow ? 'text-right' : 'text-left'}`}>
                                         {engShow ? item.arabAnswer : item.answer}
                                     </p>
                                 </div>

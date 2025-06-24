@@ -54,38 +54,75 @@ const TravelStory = ({ engShow }) => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px] auto-rows-[1fr]">
-                {/* First two cards */}
                 <div className="lg:row-span-1">
-                    <Image
-                        src={travelStories[0].image}
-                        alt="img"
-                        width={393}
-                        height={551}
-                        className="w-full h-full object-cover"
-                    />
-                </div>
+                    <div className="group relative">
+                        <Image
+                            src={travelStories[0].image}
+                            alt="img"
+                            width={393}
+                            height={551}
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute hidden bottom-0 z-30 p-[15px] group-hover:flex flex-col gap-3">
+                            <div className="flex justify-between items-center">
+                                <div className="flex items-center gap-2">
+                                    <Image src="/assets/images/webp/blog.webp" width={36} height={36} className="rounded-full" alt="blog" />
+                                    <span className="font-medium text-white text-base">skylinehunter</span>
+                                </div>
+                                <p className="text-[#FA9F54] text-sm font-medium">2.5 km away</p>
+                            </div>
+                            <p className="px-2.5 py-1 text-base font-medium bg-dark-pink max-w-max rounded-lg text-white">Instagrammable Spot</p>
+                            <p className="text-sm text-white/80">Witness the golden hour like never before world’s tallest building.</p>
+                        </div>
+                    </div>
 
+                </div>
                 <div className="lg:row-span-1">
-                    <Image
-                        src={travelStories[1].image}
-                        alt="img"
-                        width={393}
-                        height={551}
-                        className="w-full h-full object-cover"
-                    />
-                </div>
+                    <div className="group relative">
+                        <Image
+                            src={travelStories[1].image}
+                            alt="img"
+                            width={393}
+                            height={551}
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute hidden bottom-0 z-30 p-[15px] group-hover:flex flex-col gap-3">
+                            <div className="flex justify-between items-center">
+                                <div className="flex items-center gap-2">
+                                    <Image src="/assets/images/webp/blog.webp" width={36} height={36} className="rounded-full" alt="blog" />
+                                    <span className="font-medium text-white text-base">skylinehunter</span>
+                                </div>
+                                <p className="text-[#FA9F54] text-sm font-medium">2.5 km away</p>
+                            </div>
+                            <p className="px-2.5 py-1 text-base font-medium bg-dark-pink max-w-max rounded-lg text-white">Instagrammable Spot</p>
+                            <p className="text-sm text-white/80">Witness the golden hour like never before world’s tallest building.</p>
+                        </div>
+                    </div>
 
-                {/* Next two stacked cards */}
+                </div>
                 <div className="grid gap-[30px]">
                     {travelStories.slice(2).map((obj, i) => (
                         <div key={i}>
-                            <Image
-                                src={obj.image}
-                                alt="img"
-                                width={393}
-                                height={275}
-                                className="w-full h-auto object-cover"
-                            />
+                            <div className="group relative">
+                                <Image
+                                    src={obj.image}
+                                    alt="img"
+                                    width={393}
+                                    height={275}
+                                    className="w-full group h-auto object-cover"
+                                />
+                                <div className="absolute hidden bottom-0 z-30 p-[15px] group-hover:flex flex-col gap-3">
+                                    <div className="flex justify-between items-center">
+                                        <div className="flex items-center gap-2">
+                                            <Image src="/assets/images/webp/blog.webp" width={36} height={36} className="rounded-full" alt="blog" />
+                                            <span className="font-medium text-white text-base">skylinehunter</span>
+                                        </div>
+                                        <p className="text-[#FA9F54] text-sm font-medium">2.5 km away</p>
+                                    </div>
+                                    <p className="px-2.5 py-1 text-base font-medium bg-dark-pink max-w-max rounded-lg text-white">Instagrammable Spot</p>
+                                    <p className="text-sm text-white/80">Witness the golden hour like never before world’s tallest building.</p>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
