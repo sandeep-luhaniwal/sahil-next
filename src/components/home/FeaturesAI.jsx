@@ -4,7 +4,7 @@ import React from 'react'
 
 const FeaturesAI = ({ engShow }) => {
     return (
-        <div className={`bg_features_eng  py-14 md:py-16 lg:py-20`}>
+        <div id='features' className={`bg_features_eng  py-14 md:py-16 lg:py-20`}>
             <div className="max-w-[1250px] px-4 mx-auto xl:px-0">
                 <div className={`flex flex-col lg:flex-row gap-8 lg:gap-6 xl:gap-[50px] items-center ${engShow ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
                     <div className={`lg:max-w-[409px] xl:max-w-[559px] w-full ${engShow ? "text-right" : "text-left"}`}>

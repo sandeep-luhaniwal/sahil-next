@@ -14,6 +14,7 @@
 @font-face {
   font-family: 'expo-arabic';
   src: url('../../public/assets/fonts/expo-arabic/Expo-Arabic-Light.ttf');
+  font-weight: 400;
 }
 
 @font-face {

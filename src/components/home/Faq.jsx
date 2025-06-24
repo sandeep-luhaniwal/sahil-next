@@ -46,7 +46,7 @@ const Faq = ({ engShow }) => {
     };
 
     return (
-        <div className="bg-white py-14 md:py-16 lg:py-20">
+        <div id='faqs' className="bg-white py-14 md:py-16 lg:py-20">
             <div className="max-w-[1240px] mx-auto px-4 xl-px-0">
                 <div className={`${engShow ? 'direction-rtl' : ''} grid grid-cols-1 lg:grid-cols-[37%_59%] gap-10 md:gap-6 xl:gap-[10px] justify-between items-center`}>
                     <div className={` ${engShow ? "text-right" : "text-left"}`}>

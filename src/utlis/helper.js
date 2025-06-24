@@ -7,17 +7,17 @@ export const NAVIGATION_LINK_LIST = [
     {
         arabic: " الميزات ",
         title: "Features",
-        url: "/features",
+        url: "#features",
     },
     {
         arabic: " الشهادة ",
         title: "Testimonial",
-        url: "/testimonial",
+        url: "#testimonial",
     },
     {
         arabic: " الأسئلة الشائعة ",
         title: "FAQS",
-        url: "/faqs",
+        url: "#faqs",
     },
 
 ];

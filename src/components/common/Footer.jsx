@@ -50,10 +50,10 @@ const Footer = ({ engShow }) => {
           <div className='flex flex-col gap-3 lg:gap-4'>
             <p className='text-white font-medium text-xl md:text-2xl'> {engShow ? " شركتنا " : "Our Company"}</p>
             <Link href={"/"} className='text-white leading-156 font-normal text-base hover:text-orange duration-300'>{engShow ? "الصفحة الرئيسية " : "Home"}</Link>
-            <Link href={"/"} className='text-white leading-156 font-normal text-base hover:text-orange duration-300'>{engShow ? " حول " : "About"}</Link>
-            <Link href={"/"} className='text-white leading-156 font-normal text-base hover:text-orange duration-300'>{engShow ? " الميزات " : "Features"}</Link>
-            <Link href={"/"} className='text-white leading-156 font-normal text-base hover:text-orange duration-300'>{engShow ? " الشهادات " : "Testimonials"}</Link>
-            <Link href={"/"} className='text-white leading-156 font-normal text-base hover:text-orange duration-300'>{engShow ? " الأسئلة الشائعة " : "FAQ"}</Link>
+            <Link href={"#about"} className='text-white leading-156 font-normal text-base hover:text-orange duration-300'>{engShow ? " حول " : "About"}</Link>
+            <Link href={"#features"} className='text-white leading-156 font-normal text-base hover:text-orange duration-300'>{engShow ? " الميزات " : "Features"}</Link>
+            <Link href={"#testimonials"} className='text-white leading-156 font-normal text-base hover:text-orange duration-300'>{engShow ? " الشهادات " : "Testimonials"}</Link>
+            <Link href={"#faqs"} className='text-white leading-156 font-normal text-base hover:text-orange duration-300'>{engShow ? " الأسئلة الشائعة " : "FAQ"}</Link>
           </div>
           <div className='flex flex-col gap-3 lg:gap-4'>
             <p className='text-white font-medium text-xl md:text-2xl'>  {engShow ? "شركتنا" : "Important Links"}</p>
