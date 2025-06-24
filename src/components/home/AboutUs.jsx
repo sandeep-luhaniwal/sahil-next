@@ -3,9 +3,9 @@ import React from 'react'
 
 const AboutUs = ({ engShow }) => {
     return (
-        <div id='aboutus' className='relative py-14 md:py-16 lg:py-20 bg-white'>
+        <div id='about' className='relative py-14 md:py-16 lg:py-20 bg-white'>
             <Image src={"/assets/images/svg/square-animate.svg"}
-             className={`absolute pointer-events-none top-2 max-w-[129px] ${engShow ? "left-2.5" : "right-2.5"} `}
+                className={`absolute pointer-events-none top-2 max-w-[129px] ${engShow ? "left-2.5" : "right-2.5"} `}
                 width={129}
                 height={129}
                 alt='background'

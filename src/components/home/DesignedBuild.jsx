@@ -39,15 +39,15 @@ const DesignedBuild = ({ engShow }) => {
                             {engShow
                                 ? "مصمم لسهولة الاستخدام، مبني خصيصًا لك"
                                 : "Designed for Ease, Built for You"}
-                                <span>
-                                    <Image
-                                    height={70} 
+                            <span>
+                                <Image
+                                    height={70}
                                     width={70}
                                     alt='gif-animtaion'
                                     src={"/assets/images/gif/animation.gif"}
-                                    className={`w-[70px] h-[70px] absolute  -z-[1] ${engShow ? "-top-10 sm:top-0 sm:-left-10 lg:left-0":"-right-0 sm:top-0 top-10 md:-right-16"}`}
-                                    />
-                                </span>
+                                    className={`w-[70px] h-[70px] absolute  -z-[1] ${engShow ? "-top-10 sm:top-0 sm:-left-10 lg:left-0" : "-right-0 sm:top-0 top-10 md:-right-16"}`}
+                                />
+                            </span>
                         </h2>
                         <p className='text-black/65 text-base font-normal pt-2.5 leading-156'>
                             {engShow

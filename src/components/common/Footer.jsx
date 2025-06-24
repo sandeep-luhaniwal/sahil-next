@@ -61,7 +61,7 @@ const Footer = ({ engShow }) => {
             <Link href={"/"} className='text-white leading-156 font-normal text-base hover:text-orange duration-300'>  {engShow ? "الشروط والأحكام" : "Terms & Condition"}</Link>
             <div className='pt-3'>
               <p className='text-white font-medium text-xl md:text-2xl pb-2'>{engShow ? "ابق على تواصل!" : "Get in Touch!"}</p>
-              <Link href={"/"} className={`text-white flex ${engShow ? "flex-row-reverse" : "flex-row"} items-center gap-6 leading-156 font-normal text-base hover:text-orange duration-300`}>
+              <Link href={"mailto:hello@sahilmate.com"} className={`text-white flex ${engShow ? "flex-row-reverse" : "flex-row"} items-center gap-6 leading-156 font-normal text-base hover:text-orange duration-300`}>
                 hello@sahilmate.com
                 <span><Icons icon={"redArrow"} /></span></Link>
             </div>

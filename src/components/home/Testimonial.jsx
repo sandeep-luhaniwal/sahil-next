@@ -41,9 +41,9 @@ const Testimonial = ({ engShow }) => {
 
   return (
     <div id='testimonial' className='relative'>
-       <Image width={117} height={117} src="/assets/images/svg/circle.svg" alt='circle'
-             className={`absolute bottom-0 left-[60%]`} />
-      <Image className={`absolute z-10 ${engShow ?"left-0":"right-0"} xl:-top-28 -top-20 max-w-40 xl:max-w-[300px]`} src={"/assets/images/webp/mobile.webp"} width={300} height={287} alt='cimobiel' />
+      <Image width={117} height={117} src="/assets/images/svg/circle.svg" alt='circle'
+        className={`absolute bottom-0 left-[60%]`} />
+      <Image className={`absolute z-10 ${engShow ? "left-0" : "right-0"} xl:-top-28 -top-20 max-w-40 xl:max-w-[300px]`} src={"/assets/images/webp/mobile.webp"} width={300} height={287} alt='cimobiel' />
       <div className='max-w-[980px] mx-auto px-4 xl:px-0 py-14 md:py-16 lg:py-20'>
         <div className='text-center'>
           <p className='text-lg md:text-xl leading-175 text-black uppercase'>
@@ -59,7 +59,7 @@ const Testimonial = ({ engShow }) => {
         <div className={`flex flex-col gap-14 justify-between mt-10 md:mt-12 lg:mt-[50px] items-center ${engShow ? "lg:flex-row-reverse text-end" : "lg:flex-row"}`}>
           <div className='max-w-[361px] w-full relative'>
             <Image width={117} height={117} src="/assets/images/svg/circle.svg" alt='circle'
-             className={`absolute -top-[60px] -left-[60px]`} />
+              className={`absolute -top-[60px] -left-[60px]`} />
             <Image
               alt='testimonial'
               width={361}

@@ -8,7 +8,7 @@ const Hero = ({ engShow }) => {
             <h1 className="text-white leading-120 text-center max-w-[951px] mx-auto text-4xl md:text-5xl lg:text-6xl xl:text-[64px] font-bold mb-2.5">
                 {engShow ? "رفيق سفرك الذكي في الرياض وجدة والعلا" : "Your Smart Travel Companion in Riyadh, Jeddah, & AlUlA"}
             </h1>
-            <p className='text-white font-medium text-xl md:text-[22px] lg:text-2xl leading-125 text-center'>
+            <p className='text-white ff_e text-xl md:text-[22px] lg:text-2xl leading-125 text-center'>
                 {engShow ? "استكشف المعالم الشهيرة والكنوز المخفية والنكهات المحلية - كل ذلك في تطبيق واحد." : "Explore iconic landmarks, hidden gems, and local flavors—all in one app."}
             </p>
             <div className='flex gap-4 items-center justify-center pt-[30px] pb-12'>

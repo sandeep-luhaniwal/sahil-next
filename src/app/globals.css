@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: 'expo-arabic';
-  src: url('../../public/assets/fonts/expo-arabic/Expo-Arabic-Light.ttf');
+  src: url('../../public/assets/fonts/expo-arabic/expro.ttf');
   font-weight: 400;
 }
 
@@ -23,11 +23,30 @@
 }
 
 @font-face {
+  font-family: 'expo-arabic-light';
+  src: url('../../public/assets/fonts/expo-arabic/Expo-Arabic-Light.ttf');
+  font-weight: 400;
+}
+
+@font-face {
   font-family: 'expo-arabic-med';
   src: url('../../public/assets/fonts/expo-arabic/Expo-Arabic-med.ttf');
 }
 
+* {
+  scroll-behavior: smooth !important;
+}
+
 body {
+  scroll-behavior: smooth !important;
+  font-family: 'expo-arabic' !important;
+}
+
+.ff_light {
+  font-family: 'expo-arabic-light' !important;
+}
+
+.ff_e {
   font-family: 'expo-arabic' !important;
 }
 
@@ -36,6 +55,7 @@ body {
   background-size: cover;
   background-position: top;
 }
+
 .bg_features_eng {
   background-image: url('/assets/images/webp/features-ai.webp');
   background-size: cover;
@@ -62,6 +82,7 @@ body {
   direction: rtl;
 }
 
-.direction-rtl > * {
-  direction: ltr; /* so inner content stays normal */
+.direction-rtl>* {
+  direction: ltr;
+  /* so inner content stays normal */
 }

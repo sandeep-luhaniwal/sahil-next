@@ -27,7 +27,7 @@ const NavBar = ({ engShow, setEngShow }) => {
             {NAVBAR_LINKS.map((obj, i) => {
               return (
                 <Link href={obj.url} key={i}
-                  className={`text-white text-base font-normal transition-all durration-300 hover:text-orange relative
+                  className={`text-white ff_light text-base font-normal transition-all durration-300 hover:text-orange relative
                      before:w-0 before:h-[2px] before:bg-orange before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:durration-300`}
                 >
                   {engShow ? `${obj.arabic}` : `${obj.title}`}
@@ -37,7 +37,7 @@ const NavBar = ({ engShow, setEngShow }) => {
           </div>
           <div className={`flex ${engShow ? "flex-row-reverse" : "flex-row"} items-center gap-3 sm:gap-4`}>
             <p onClick={() => setEngShow(!engShow)} className={`text-white cursor-pointer text-base font-normal transition-all durration-300 hover:text-orange relative
-                     before:w-0 before:h-[2px] before:bg-orange before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:durration-300`}
+                     before:w-0 ff_light before:h-[2px] before:bg-orange before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:durration-300`}
             > {engShow ? "Eng" : "ARAB"}</p>
             <button className='rounded-[50px] group cursor-pointer p-[1px] bg_gradient'>
               <span className='bg-dark-pink block group-hover:bg-orange duration-300 text-white font-medium text-base px-2.5 py-1.5 sm:px-5 sm:py-3 md:xp-7 lg:px-[30px] md:py-[15px] rounded-[100px]'>Download App</span>
@@ -59,7 +59,7 @@ const NavBar = ({ engShow, setEngShow }) => {
             <Link href={obj.url}
               key={i}
               onClick={() => setIsOpen(false)}
-              className={`text-white text-xl max-w-max font-normal transition-all durration-300 hover:text-orange relative
+              className={`text-white text-xl ff_light max-w-max font-normal transition-all durration-300 hover:text-orange relative
                      before:w-0 before:h-[2px] before:bg-orange before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:durration-300`}
             >
               {obj.title}

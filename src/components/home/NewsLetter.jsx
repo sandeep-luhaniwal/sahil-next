@@ -23,7 +23,7 @@ const NewsLetter = ({ engShow }) => {
                     </div>
                     <div className="w-full lg:max-w-[552px] pt-8 md:pt-0">
                         <form className="relative">
-                            <button className={`font-medium z-20 cursor-pointer absolute top-0 ${engShow ?"left-2.5":"end-2.5"} text-base duration-300 hover:text-white hover:bg-black text-dark-pink bg-white rounded-[10px] px-4 py-2.5`}>
+                            <button className={`font-medium z-20 cursor-pointer absolute top-0 ${engShow ? "left-2.5" : "end-2.5"} text-base duration-300 hover:text-white hover:bg-black text-dark-pink bg-white rounded-[10px] px-4 py-2.5`}>
                                 {engShow ? " سياسة الخصوصية " : "Subscribe"}
                             </button>
                             <input
@@ -32,7 +32,7 @@ const NewsLetter = ({ engShow }) => {
                                 name="email"
                                 id="sub"
                                 placeholder={engShow ? " روابط مهمة " : "Type your email here"}
-                                className={`text-white outline-none w-full py-3 px-2.5 border-b-white border-b ${engShow ?"text-end":"text-left"}`}
+                                className={`text-white outline-none w-full py-3 px-2.5 border-b-white border-b ${engShow ? "text-end" : "text-left"}`}
                             />
                         </form>
                     </div>
