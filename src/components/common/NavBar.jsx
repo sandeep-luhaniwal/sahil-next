@@ -14,16 +14,16 @@ const NavBar = ({ engShow, setEngShow }) => {
   return (
     <div className='bg_hero'>
       <div className='mx-auto max-w-[1250px] px-4 xl:px-0'>
-        <div className={`flex ${engShow ? "flex-row-reverse" : "flex-row"} justify-between items-center gap-4 py-8 md:py-12 lg:py-[50px]`}>
+        <div className={`flex ${engShow ? "flex-row-reverse" : "flex-row"} justify-between items-center gap-2 sm:gap-4 md:gap-2 py-8 md:py-12 lg:py-[50px]`}>
 
           <Link href={'/'}>
             <Image src={"/assets/images/webp/page-logo.webp"}
-              height={51}
+              height={60}
               width={124}
               alt='page-logo'
-              className='w-[80px] sm:w-[100px] lg:w-[124px]' />
+              className='w-[130px] sm:w-[160px] lg:w-[200px]' />
           </Link>
-          <div className='md:flex items-center hidden gap-4 md:gap-6 lg:gap-10 xl:gap-[50px]'>
+          <div className='md:flex items-center hidden gap-4 md:gap-4 lg:gap-10 xl:gap-[50px]'>
             {NAVBAR_LINKS.map((obj, i) => {
               return (
                 <Link href={obj.url} key={i}
@@ -35,10 +35,10 @@ const NavBar = ({ engShow, setEngShow }) => {
               )
             })}
           </div>
-          <div className={`flex ${engShow ? "flex-row-reverse" : "flex-row"} items-center gap-3 sm:gap-4`}>
+          <div className={`flex ${engShow ? "flex-row-reverse" : "flex-row"} items-center md:gap-2 lg:gap-4 gap-2 sm:gap-4`}>
             <div className='relative group'>
               <p className={`text-white cursor-pointer text-base font-normal transition-all durration-300 group-hover:text-orange relative
-                     before:w-0 ff_light flex items-center gap-1 before:h-[2px] before:bg-orange before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:durration-300`}
+                     before:w-0 ff_light flex items-center gap-0.5 sm:gap-1 before:h-[2px] before:bg-orange before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:durration-300`}
               > {engShow ? "AR" : "En"} <span><Icons className icon={"arrow"} /></span></p>
               <div className='bg-dark-blue absolute hidden group-hover:block top-full shadow-2xl text-white py-2 px-4 border border-white/60 rounded-xl'>
                 <p className='cursor-pointer hover:text-orange duration-300' onClick={() => setEngShow(false)}>En</p>
@@ -46,7 +46,7 @@ const NavBar = ({ engShow, setEngShow }) => {
               </div>
             </div>
             <button className='rounded-[50px] group cursor-pointer p-[1px] bg_gradient'>
-              <span className='bg-dark-pink block group-hover:bg-orange duration-300 text-white font-medium text-base px-2.5 py-1.5 sm:px-5 sm:py-3 md:xp-7 lg:px-[30px] md:py-[15px] rounded-[100px]'>Download App</span>
+              <span className='bg-dark-pink block group-hover:bg-orange duration-300 text-white font-medium sm:text-base px-1 text-sm py-1.5 sm:px-5 md:py-1.5 sm:py-3 md:px-2 lg:px-[30px] lg:py-[15px] rounded-[100px]'>Download App</span>
             </button>
             <div onClick={() => setIsOpen(true)} className='md:hidden cursor-pointer'>
               <Icons icon={"menuToggel"} />

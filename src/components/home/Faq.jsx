@@ -75,7 +75,7 @@ const Faq = ({ engShow }) => {
                             >
                                 <div
                                     onClick={() => toggleFAQ(index)}
-                                    className={`w-full cursor-pointer text-base md:text-lg lg:text-xl font-medium p-[15px] leading-175 focus:outline-none flex items-start justify-between ${engShow ? 'flex-row-reverse' : ''}`}
+                                    className={`w-full cursor-pointer text-base md:text-lg lg:text-xl font-medium p-3 sm:p-[15px] gap-1 leading-175 focus:outline-none flex items-start justify-between ${engShow ? 'flex-row-reverse text-right' : 'text-left'}`}
                                 >
                                     <span>
                                         {engShow ? item.arabQuestion : item.question}

@@ -12,10 +12,10 @@ const Footer = ({ engShow }) => {
           <div className={`flex flex-col ${engShow ? "items-end" : ""}`}>
             <Link href={'/'}>
               <Image src={"/assets/images/webp/page-logo.webp"}
-                height={51}
+                height={60}
                 width={124}
                 alt='page-logo'
-                className='w-[80px] sm:w-[100px] lg:w-[124px]' />
+                className='w-[130px] sm:w-[160px] lg:w-[200px]' />
             </Link>
             <p className='pt-2 text-white text-sm'>
               {engShow ? "لوريم إيبسوم هو ببساطة نص وهمي لصناعة الطباعة والتنضيد." : " Lorem Ipsum is simply dummy text of the printing and typesetting industry."}
